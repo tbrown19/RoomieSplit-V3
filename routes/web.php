@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/residences', function () {
+    App\Residence::create(request(['title']));
+});
